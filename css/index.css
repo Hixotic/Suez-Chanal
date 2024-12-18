@@ -6,15 +6,18 @@ box-sizing: border-box;
 font-family: 'Poppins',sans-serif;
 }
 
+body{
+  background: #eaeaea; 
+}
+
 .header{
-    background-color: white;
     font-weight:600;
     font-size: medium;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 5%;
+    padding: 40px 5%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -30,9 +33,9 @@ font-family: 'Poppins',sans-serif;
     font-size: medium;
     padding: 0 20px;
     background-color: #EE626B;
-    color: #ffff;
+    color: #fff;
     text-transform: uppercase;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .singn_in_btn:hover {
@@ -80,23 +83,199 @@ font-family: 'Poppins',sans-serif;
     background: transparent;
     border: 2px solid transparent;
     text-decoration: none;
+    transform: rotate(45deg);
+    transition: .5s;
     opacity: 0;
     animation: slideSci .5s ease forwards;
     animation-delay :calc(.2s * var(--i)) ;
 }
 .soial-media a:hover{
-    transform: rotate(45deg);
-    transition: 0.5s;
-    border-color: #222;
+border-color: #eaeaea;
 }
 .soial-media a i{
     font-size: 24px;
-    color: #222;
+    color: #eaeaea;
     transform: rotate(-45deg);
 
 }
 
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+.home-content{
+    max-width: 630px;
+}
+.home-content h1{
+    font-size: 50px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
 
+}
+.home-content h3{
+    font-size: 40px;
+    color: #1743e3;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+.home-content p{
+    font-size: 16px;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: #1743e3;
+    border: 2px solid #1743e3;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0 ,0 ,0,.1);
+    font-size: 16px;
+    color: #eaeaea;
+    letter-spacing: 1px;
+    text-decoration:none ;
+    font-weight: 600;
+    transition: .5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    
+}
+.btn:hover{
+    background: transparent;
+    color: #1743e3;
+}
+
+.home-img{
+    position: relative;
+    right: -7%;
+    width: 330px;
+    height: 330px;
+    transform: rotate(45deg);
+}
+.home-img .rhombus{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eaeaea;
+    border: 30px solid #1743e3;
+    margin:  20px;
+    box-shadow: -15px 15px 15px rgba(0 ,0 ,0,.2);
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 1.6s;
+}
+.home-img .rhombus img{
+    position: absolute;
+    top: 50px;
+    left: -230px;
+    max-width: 530px;
+    transform: rotate(-45deg);
+    filter: drop-shadow(5px 5px 15px black);
+    opacity: 0;
+    animation: ship 1s ease forwards;
+    animation-delay: 2s;
+}
+.home .rhombus2{
+    position: absolute;
+    top: -20%;
+    right: -25%;
+    width: 650px;
+    height: 650px;
+    background: #1743e3;
+    transform: rotate(45deg);
+    z-index: -1;
+    opacity: 0;
+    animation: rhombus2 1s ease forwards;
+}
+
+
+/* CATEGORY GAMES  */
+
+.category{
+  width: 100%;
+  margin-bottom:300px;
+}
+   
+.categoryContainer {
+    margin-top: 0px;
+    display: flex;
+}
+
+.category .categoryHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay :calc(.2s * var(--i)) ;
+}
+
+.category .card .cardImg{
+    position: relative;
+    top: -20px;
+    width: 230;
+    height: 220;
+    border-radius: 20px;
+    
+}
+.category .card img {
+    border-radius: 20px;
+    width: 230;
+    height: 240;
+}
+.card a{
+  text-decoration: none;
+}
+
+
+.category .card .genre {
+    background-color: #0171F9;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0 30px 0;
+    font-size: x-large;
+    font-weight: 500;
+    border-radius: 20px 20px 0 0;
+}
+
+.category .categoryCards {
+    padding: 10;
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    
+
+}
+.card {
+    transition: .3s;
+}
+
+.category .card:hover {
+    transform: scale(1.05);
+}
+
+main{
+  position: relative;
+}
+
+/* END CATEGORY GAMES  */
 
 
 /*keyframes animation*/

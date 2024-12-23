@@ -13,7 +13,6 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
     color: #000000; /* Set the text color to white to stand out against the dark background */
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +27,7 @@ body {
     border-radius: 10px;
     max-width: 800px;
     width: 100%;
+    margin-top: 50px;
 }
 
 h1 {
